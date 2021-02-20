@@ -1,3 +1,100 @@
 @import "variables";
 @import "mixins";
 @import "reboot";
+
+
+body {
+  display: flex;
+  flex-direction: column;
+  height: 100vh;
+}
+
+.header {
+  border-bottom: 1px solid $border-color;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 40px;
+
+  ul {
+    display: flex;
+    margin: 20px 0;
+    li {
+      margin-right: 20px;
+    }
+  }
+}
+
+.button {
+  padding: 5px 20px;
+  cursor: pointer;
+  border: 1px solid $primary-color;
+  color: $primary-color;
+  background-color: $body-bg;
+  border-radius: 9999px;
+  width: 100px;
+
+  &:focus {
+    outline: none;
+  }
+
+  &-primary {
+    color: $white;
+    background-color: $primary-color;
+  }
+}
+
+.main {
+  flex: 1;
+  justify-content:center;
+
+  display: flex;
+  flex-direction: column;
+
+  .login {
+    display: block;
+    border: 1px solid $border-color;
+    width: 400px;
+    margin: auto auto;
+    padding: 30px;
+    text-align: center;
+
+    .title {
+      font-size: 24px;
+      font-weight: bold;
+      color: $white;
+      display: inline-block;
+      padding-bottom: 30px;
+    }
+
+    .login-form {
+      text-align: left;
+    }
+
+    a {
+      color: $primary-color;
+      &:hover {
+        cursor: pointer;
+      }
+    }
+
+    input {
+      border: none;
+      width: 100%;
+      background-color: $body-bg;
+      color: $white;
+      margin-top: 16px;
+      padding: 0;
+      margin-bottom: 16px;
+      font-size: 16px;
+      border-bottom: 1px solid $border-color;
+      &:focus {
+        outline: none;
+      }
+    }
+
+    .button {
+      width: 100%;
+    }
+  }
+}
